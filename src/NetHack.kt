@@ -38,13 +38,18 @@ fun main(args: Array<String>) {
     println("$playerName $newHealthStatus")
 
     // if expressions can be replaced by when expressions , if there is a else if block in your code
-    val latestHealthStatus = when(health) {
+    val latestHealthStatus = getLatestHealthStatus(health)
+
+    println("$playerName $latestHealthStatus")
+
+}
+
+private fun getLatestHealthStatus(health: Int): String {
+    val latestHealthStatus = when (health) {
         100 -> "is in good condition."
         in 0.until(70) -> "is in awful condition."
         in 70.until(100) -> "is in OK condition."
         else -> "Something went wrong"
     }
-
-    println("$playerName $latestHealthStatus")
-
+    return latestHealthStatus
 }
