@@ -1,6 +1,8 @@
+
 fun main(args: Array<String>) {
-    println(longestSubstring("dvdf"))
+    println(longestSubstring("dvvf"))
 }
+
 
 private fun longestSubstring(input: String = "bbbbbb"): Int {
     var tempSubstring = ""
